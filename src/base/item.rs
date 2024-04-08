@@ -1,3 +1,6 @@
+mod equipitem;
+mod useitem;
+
 pub enum ItemType
 {
     EquipItem,

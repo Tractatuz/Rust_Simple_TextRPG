@@ -18,7 +18,6 @@ impl ShopScene
         return ShopScene
         {
             player,
-            //items : Vec::new(),
             items : vec![],
         }
     }
@@ -50,6 +49,10 @@ impl crate::base::Base for ShopScene
     {
         println!("Welcome To Shop");
         self.player.get_inventory().render();
+        for item in &self.items
+        {
+            item.render();
+        }
         println!("1 ~ 9 : Buy Item, 0 : Lobby");
     }
 }
